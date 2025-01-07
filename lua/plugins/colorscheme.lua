@@ -1,4 +1,10 @@
 return {
+  -- Add high contrast themes
+  { "ellisonleao/gruvbox.nvim", lazy = true },
+  { "ishan9299/nvim-solarized-lua", lazy = true },
+  { "rebelot/kanagawa.nvim", lazy = true }, -- Another good high contrast option
+  
+  -- Keep existing catppuccin config
   {
     "catppuccin/nvim",
     lazy = true,
@@ -42,10 +48,18 @@ return {
       },
     },
   },
+
+  -- Update LazyVim config
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
-    },
-  },
+      colorscheme = "kanagawa", -- Changed default to kanagawa
+      colorschemes = {
+        "gruvbox",
+        "solarized", 
+        "kanagawa",
+        "tokyonight-storm"
+      }
+    }
+  }
 }

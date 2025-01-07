@@ -1,5 +1,14 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 vim.g.maplocalleader = "\\"
+
+-- Disable smooth scrolling animations
+vim.g.snacks_animate = false
+
+-- Line number optimizations
+-- vim.opt.number = true
+-- vim.opt.relativenumber = true
+-- vim.opt.numberwidth = 4 -- Fixed width for numbers
+
 require("config.lazy")
 --
 -- -- Enable true color support

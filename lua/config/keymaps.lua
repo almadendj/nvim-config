@@ -36,3 +36,32 @@ end, { desc = "Previous diagnostic" })
 vim.keymap.set("n", "<leader>de", function()
   vim.diagnostic.open_float()
 end, { desc = "Show diagnostic details" })
+
+-- Debugging keymaps
+vim.keymap.set("n", "<leader>dt", function()
+  require("dap").toggle_breakpoint()
+end, { desc = "Toggle Breakpoint" })
+
+vim.keymap.set("n", "<leader>dc", function()
+  require("dap").continue()
+end, { desc = "Continue" })
+
+vim.keymap.set("n", "<leader>dso", function()
+  require("dap").step_over()
+end, { desc = "Step Over" })
+
+vim.keymap.set("n", "<leader>dsi", function()
+  require("dap").step_into()
+end, { desc = "Step Into" })
+
+vim.keymap.set("n", "<leader>dsu", function()
+  require("dap").step_out()
+end, { desc = "Step Out" })
+
+vim.keymap.set("n", "<leader>dB", function()
+  require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+end, { desc = "Breakpoint Condition" })
+
+vim.keymap.set("n", "<leader>du", function()
+  require("dapui").toggle()
+end, { desc = "Toggle DAP UI" })

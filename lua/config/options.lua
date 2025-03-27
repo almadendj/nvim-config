@@ -4,4 +4,5 @@
 vim.opt.clipboard = ""
 vim.opt.scroll = 0
 vim.opt.scrolloff = 8
+vim.g.lazyvim_picker = "telescope"
 vim.g.snacks_animate = false

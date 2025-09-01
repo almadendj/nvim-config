@@ -23,13 +23,13 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "plugins" },
     {
       "lervag/vimtex",
       lazy = false,
       init = function()
         vim.g.vimtex_quickfix_method = "zathura"
       end,
-      { import = "plugins" },
       tailwindcss = function(_, opts)
         local tw = require("lspconfig.server_configurations.tailwindcss")
         opts.filetypes = opts.filetypes or {}
